@@ -1,0 +1,9 @@
+#!/usr/bin/node
+
+//If you are getting a MODULE NOT FOUND exception, replace this line with the right filepath!
+const random_motd_file_path = "etc/random-motd.json";
+
+const random_motd_json = require(random_motd_file_path);
+const random_motd_list = random_motd_json;
+
+console.log(random_motd_list[Math.floor(Math.random() * random_motd_list.length)]);
