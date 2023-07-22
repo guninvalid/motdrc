@@ -1,0 +1,12 @@
+#!/bin/bash
+
+date;
+motd="$(cat ~/etc/motd)";
+
+if (test "$motd" == ""); then
+	
+	motd="$(random-motd)";
+	
+fi;
+
+printf "Message of the Day: $motd\n";
