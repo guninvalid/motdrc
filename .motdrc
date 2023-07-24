@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# If you are getting strange behavior, configure this to the right filepath.
+motd_file="/etc/motd";
+
 date;
-motd="$(cat ~/etc/motd)";
+motd="$(cat $motd_file)";
 
 if (test "$motd" == ""); then
 	
